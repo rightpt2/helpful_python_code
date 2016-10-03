@@ -1,0 +1,3 @@
+
+## this is a nifty little function that lets me return a True or False if a string contains another string
+rct_summary['Tecate']= rct_summary.Brand.str.contains('Tecate')
