@@ -8,3 +8,7 @@ https://gist.github.com/bsweger/e5817488d161f37dcbd2
 
 ## delete a column from a data frame
 del df['column']
+
+
+## renaming columns
+df.rename(columns={'orginal_name':'new_name', 'col2':'col2_new'}, inplace=true)
