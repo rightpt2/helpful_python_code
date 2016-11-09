@@ -12,3 +12,23 @@ del df['column']
 
 ## renaming columns
 df.rename(columns={'orginal_name':'new_name', 'col2':'col2_new'}, inplace=true)
+
+
+## selecting a subset from a data frame - Data isin
+
+include_set = ['CVS', 'Target', 'Walgreens']
+df2 = df1[df1['Chain Group'].isin(include_set)]
+
+## selecting a subset from a data frame - Data isin
+
+
+df2 = df1[df1['Chain Group'] = 'paramter' ]
+
+
+## select a subset from a data frame - Data is NOT in
+
+include_set = ['CVS', 'Target', 'Walgreens']
+df2 = df1[~df1['Chain Group'].isin(include_set)]
+
+
+
