@@ -31,4 +31,14 @@ include_set = ['CVS', 'Target', 'Walgreens']
 df2 = df1[~df1['Chain Group'].isin(include_set)]
 
 
+## Merging tables is a great way to pull data together efficiently
+
+df3 = pd.merge(df1, df2, how='type', left_on='columns', right_on='columns')
+
+## SQL Alchemy is a rad way to pull in data
+store_layers = pd.read_sql("SELECT * \
+                            FROM subscription_layers \
+                            WHERE customer_id = {0} \
+                            AND type = 'stores_layer'".format(customer_id), postgres_engine) 
+
 
