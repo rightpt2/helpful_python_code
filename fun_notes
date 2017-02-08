@@ -42,3 +42,9 @@ store_layers = pd.read_sql("SELECT * \
                             AND type = 'stores_layer'".format(customer_id), postgres_engine) 
 
 
+## Here I would like to add some interesting statistics stuff I might need in the future
+## numpy is great for having lots of these bulit in
+np.random.seed(integer)
+np.random.rand()
+
+
