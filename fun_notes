@@ -48,3 +48,11 @@ np.random.seed(integer)
 np.random.rand()
 
 
+
+# Importing files can be rad
+# excel to a data frame
+filename = 'file.xlsx'
+data = pd.ExcelFile(filename)
+
+# now we can pull just the sheet names
+data.sheet_names
