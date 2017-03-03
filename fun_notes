@@ -73,7 +73,7 @@ df2 = df2.reset_index()
 
 
 
-
-
+## You can filter on more than one criteria at a time
+working = simple_table[(simple_table['Store_id'] == 28341) & (simple_table['brands_coolers'] == 'Misc.')]
 
 
