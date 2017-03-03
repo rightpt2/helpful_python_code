@@ -62,3 +62,18 @@ df1 = data.parse(sheetname)  [you can alse you index]
 
 #another need thing to use is some parts of the parse function, be sure to use the brackes for a list
 df1 = data.parse(0, skiprows= [0], names=['Country','AAM due to War (2002)'])
+
+
+## This one is a great one. It allows you to group by in a data frame then join the strings together from a field that is not in the group by
+# Sexy!
+df2 = df1.groupby(['job_id','store_id','Pepsi_Group'])['display_present_name'].apply(','.join)
+df2 = df2.to_frame()
+df2 = df2.reset_index()
+
+
+
+
+
+
+
+
