@@ -41,6 +41,8 @@ store_layers = pd.read_sql("SELECT * \
                             WHERE customer_id = {0} \
                             AND type = 'stores_layer'".format(customer_id), postgres_engine) 
 
+# Creating the engine is pretty easy- here you add the string for the access to your database 
+engine = create_engine('sqlite:///Chinook.sqlite') 
 
 ## Here I would like to add some interesting statistics stuff I might need in the future
 ## numpy is great for having lots of these bulit in
