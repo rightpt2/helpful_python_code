@@ -44,6 +44,16 @@ store_layers = pd.read_sql("SELECT * \
 # Creating the engine is pretty easy- here you add the string for the access to your database 
 engine = create_engine('sqlite:///Chinook.sqlite') 
 
+# Another way to do this is create a connection and close it with a with. (Perform query and save results to DataFrame: df)
+with engine.connect() as con:
+    rs = con.execute("SELECT * FROM Employee WHERE EmployeeId >= 6")
+    df = pd.DataFrame(rs.fetchall())
+    df.columns = rs.keys()
+
+
+
+
+
 ## Here I would like to add some interesting statistics stuff I might need in the future
 ## numpy is great for having lots of these bulit in
 np.random.seed(integer)
