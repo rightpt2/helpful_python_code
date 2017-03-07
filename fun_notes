@@ -88,4 +88,7 @@ df2 = df2.reset_index()
 ## You can filter on more than one criteria at a time
 working = simple_table[(simple_table['Store_id'] == 28341) & (simple_table['brands_coolers'] == 'Misc.')]
 
+## This is a helpful one for queries, you can join all of the values from a column in a pandas data frame to a text string separated by a comma
+list = ','.join([str(id) for id in df['column'].tolist()])
+
 
