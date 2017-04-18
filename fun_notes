@@ -95,3 +95,10 @@ list = ','.join([str(id) for id in df['column'].tolist()])
 
 df.columns = [' '.join(col).strip() for col in df.columns.values]
 
+
+
+## This is a great way to create an excel workbook with many worksheets
+writer = pd.ExcelWriter( Wave + '_Weekly_output' + today + '.xlsx')
+answers_responses_brands.to_excel(writer,'full_answers_responses')
+test_group_OSA.to_excel(writer,'OSA_this_Week')
+writer.save()
