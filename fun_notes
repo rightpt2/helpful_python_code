@@ -102,3 +102,10 @@ writer = pd.ExcelWriter( Wave + '_Weekly_output' + today + '.xlsx')
 answers_responses_brands.to_excel(writer,'full_answers_responses')
 test_group_OSA.to_excel(writer,'OSA_this_Week')
 writer.save()
+
+
+##urllib is a cool library to get info from a website. Python 3.0 often pulls it as a bit so here is an easier decoder for text
+with urllib.request.urlopen('http://www.crummy.com/software/BeautifulSoup') as response:
+    raw_source = response.read()
+    source = raw_source.decode("utf-8")
+
