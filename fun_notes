@@ -114,3 +114,7 @@ with urllib.request.urlopen('http://www.crummy.com/software/BeautifulSoup') as r
 impute_grps = data.pivot_table(values=["LoanAmount"], index=["Gender","Married","Self_Employed"], aggfunc=np.mean)
 print impute_grps
 
+
+# for data cleaning, converts str into numbers, and sets errors to NAN
+pd.to_numeric([array],errors='coerce') 
+
